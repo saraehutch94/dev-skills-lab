@@ -1,0 +1,46 @@
+
+body {
+    font-family: Tahoma;
+    position: relative;
+}
+
+.all-content {
+    width: 450px;
+    position: absolute;
+    margin: 0 auto;
+}
+
+h1 {
+    color: white;
+    background-color:mediumseagreen;
+    text-align: center;
+    font-size: 25px;
+}
+
+.remove-btn {
+    background-color:tomato;
+    color: white;
+    border-color: tomato;
+    padding: 5px;
+    margin: 5px 0 5px 0;
+}
+
+.list-item {
+    color:orange;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+.input-box {
+    border: 2px solid mediumseagreen;
+    width: 347px;
+    height: 25px;
+}
+
+#add-skill-btn {
+    background-color: white;
+    color: mediumseagreen;
+    border-color: mediumseagreen;
+    padding: 6px;
+    margin: 0 0 0 10px;
+}
