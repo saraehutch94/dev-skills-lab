@@ -34,6 +34,10 @@ h1 {
     list-style-type: none;
 }
 
+.addedListItem {
+
+}
+
 .input-box {
     color: #900C3F;
     border: 2px solid #581845;
