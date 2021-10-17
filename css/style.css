@@ -20,6 +20,12 @@ h1 {
     font-size: 25px;
 }
 
+.add-skills-here {
+    text-align: center;
+    color: #FF5733;
+    padding: 10px;
+}
+
 .remove-btn {
     background-color: #900C3F;
     color: white;
@@ -32,10 +38,6 @@ h1 {
     color: #FF5733;
     font-weight: bold;
     list-style-type: none;
-}
-
-.addedListItem {
-
 }
 
 .input-box {
