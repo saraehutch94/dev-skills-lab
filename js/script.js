@@ -10,7 +10,7 @@ $(document).ready(function () {
 
 $("#add-skill-btn").on("click", function() {
     let $valOfEntry = $(".input-box").val();
-    let $addedSkill = $(`<li class="list-item"><button class="remove-btn">X</button>${$valOfEntry}</li>`);
+    let $addedSkill = $(`<li class="list-item"><button class="remove-btn">X</button> ${$valOfEntry}</li>`);
     $("#list-items").append($addedSkill);
     $(".add-skills-here").remove();
     $(".input-box").val("");
@@ -18,3 +18,4 @@ $("#add-skill-btn").on("click", function() {
         $(this).parent().remove();
     });
 });
+
