@@ -3,14 +3,14 @@
 let $listItem = $(".list-item");
 
 // $(document).ready(function () {
-//     alert("ready!");
+//     $listItem.remove();
 // });
-
-$(document).ready(function () {
-    $listItem.remove();
-});
 
 // User Story #2:
 
-const arrayOfSkills = [];
-
+$("#add-skill-btn").on("click", function() {
+    let $valOfEntry = $(".input-box").val();
+    let $addedSkill = $(`<li class="list-item"><button class="remove-btn">X</button>${$valOfEntry}</li>`)
+    $("#list-items").append($addedSkill);
+    $(".input-box").val("");
+})
