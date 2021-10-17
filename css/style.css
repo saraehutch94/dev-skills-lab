@@ -15,35 +15,36 @@ body {
 
 h1 {
     color: white;
-    background-color:mediumseagreen;
+    background-color: #581845;
     text-align: center;
     font-size: 25px;
 }
 
 .remove-btn {
-    background-color:tomato;
+    background-color: #900C3F;
     color: white;
-    border-color: tomato;
+    border-color: #900C3F;
     padding: 5px;
     margin: 5px 0 5px 0;
 }
 
 .list-item {
-    color:orange;
+    color: #FF5733;
     font-weight: bold;
     list-style-type: none;
 }
 
 .input-box {
-    border: 2px solid mediumseagreen;
+    color: #900C3F;
+    border: 2px solid #581845;
     width: 347px;
     height: 25px;
 }
 
 #add-skill-btn {
     background-color: white;
-    color: mediumseagreen;
-    border-color: mediumseagreen;
+    color: #581845;
+    border-color: #581845;
     padding: 6px;
     margin: 0 0 0 10px;
 }
