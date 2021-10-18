@@ -1,26 +1,40 @@
 // User Story #1:
+$(document).ready(function() {
 
-let $listItem = $(".list-item");
-
-$(document).ready(function () {
-    $listItem.remove();
-});
+    // caching html elements
+    const $displayMessage = $(".add-skills-here"); // h3 element
+    const $input = $(".input-box"); // input box
+    const $devSkillsList = $("#list-items"); // list items for dev skills
+    const $addSkillsBtn = $("#add-skill-btn"); // add skills button
 
 // User Story #2 + #3:
 
-$("#add-skill-btn").on("click", function() {
-    let $valOfEntry = $(".input-box").val();
-    let $addedSkill = $(`<li class="list-item"><button class="remove-btn">X</button> ${$valOfEntry}</li>`);
+    $addSkillsBtn.on("click", function() {
+        
+        // grabbing user input
+        let $valOfEntry = $input.val();
 
-    if ($valOfEntry.length === 0) {
-        $(".add-skills-here").text("Please enter a valid skill!");
-        return;
-    }
+        // create list item element using the user's input
+        let $addedSkill = $(`<li class="list-item"> ${$valOfEntry}</li>`);
 
-    $("#list-items").append($addedSkill);
-    $(".add-skills-here").remove();
-    $(".input-box").val("");
-    $(".remove-btn").on("click", function() {
-        $(this).parent().remove();
+        // conditional logic
+        if ($valOfEntry.length === 0) {
+            $displayMessage.css("display", "block");
+            $displayMessage.text("Please enter a valid skill!");
+            // return statement added to prevent appending an empty string as a skill on the list
+            return;
+        } else {
+            $displayMessage.text(" ");
+            $displayMessage.css("display", "none");
+
+            const $deleteBtn = $('<button class="remove-btn">X</button>');
+
+            $deleteBtn.on("click", function() {
+                $(this).parent().remove();
+            });
+            $addedSkill.prepend($deleteBtn);
+            $devSkillsList.append($addedSkill);
+            $input.val("");
+        };
     });
 });
