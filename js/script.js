@@ -11,6 +11,12 @@ $(document).ready(function () {
 $("#add-skill-btn").on("click", function() {
     let $valOfEntry = $(".input-box").val();
     let $addedSkill = $(`<li class="list-item"><button class="remove-btn">X</button> ${$valOfEntry}</li>`);
+
+    // if ($valOfEntry.length === 0) {
+    //     $(".add-skills-here").text("Please enter a valid skill!");
+    //     return;
+    // }
+
     $("#list-items").append($addedSkill);
     $(".add-skills-here").remove();
     $(".input-box").val("");
@@ -18,4 +24,3 @@ $("#add-skill-btn").on("click", function() {
         $(this).parent().remove();
     });
 });
-
