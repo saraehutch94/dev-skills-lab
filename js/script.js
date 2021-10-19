@@ -6,8 +6,27 @@ $(document).ready(function() {
     const $input = $(".input-box"); // input box
     const $devSkillsList = $("#list-items"); // list items for dev skills
     const $addSkillsBtn = $("#add-skill-btn"); // add skills button
+    const $previousEntriesUl = $(".previous-entries");
+    
+    // declare variables
+    const skillsDatabase = window.localStorage;
+    let skillCounter = 1;
+
+    // for loop through each value within local storage
+    // push each value from local storage to previous entries ul
+    for (let i = 1; i <= skillsDatabase.length; i++) {
+        let listedSkill = skillsDatabase.getItem(i);
+        $previousEntriesUl.append(`${listedSkill}</br>`);
+    };
 
     // User Story #2 + #3:
+
+    // functions
+
+    // function: add entered skill to local storage
+    function addToStorage(key, skill) {
+        skillsDatabase.setItem(key, skill);
+    };
 
     // add skills button event listener
     $addSkillsBtn.on("click", function() {
@@ -46,6 +65,11 @@ $(document).ready(function() {
 
             // clear input box after user enters skill
             $input.val("");
+
+            // add skill to local storage
+            addToStorage(skillCounter, $valOfEntry);
+
+            skillCounter++;
         };
     });
 });

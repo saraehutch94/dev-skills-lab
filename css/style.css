@@ -70,5 +70,11 @@ h1 {
 h4 {
     color: #FF5733;
     position: relative;
-    top: -10px;
+    top: -5px;
+}
+
+.previous-entries {
+    padding: 10px;
+    margin: 0 0 10px 0;
+    color: #581845;
 }
