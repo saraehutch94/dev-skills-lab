@@ -7,7 +7,7 @@ $(document).ready(function() {
     const $devSkillsList = $("#list-items"); // list items for dev skills
     const $addSkillsBtn = $("#add-skill-btn"); // add skills button
 
-// User Story #2 + #3:
+    // User Story #2 + #3:
 
     // add skills button event listener
     $addSkillsBtn.on("click", function() {
@@ -28,6 +28,7 @@ $(document).ready(function() {
             // clear display message and hide it with css to remove additional whitespace
             $displayMessage.text(" ");
             $displayMessage.css("display", "none");
+            // css display applied to previous entries
 
             // create delete button as it does not exist on page load
             const $deleteBtn = $('<button class="remove-btn">X</button>');

@@ -58,3 +58,17 @@ h1 {
     padding: 6px;
     margin: 0 0 0 7px;
 }
+
+.previous-entries-div {
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    border: dotted #900C3F;
+    margin: 13px 0 0 0;
+}
+
+h4 {
+    color: #FF5733;
+    position: relative;
+    top: -10px;
+}
