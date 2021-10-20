@@ -10,27 +10,27 @@ $(document).ready(function() {
     
     // declare variables
     const skillsDatabase = window.localStorage;
-    let skillCounter = 1;
+    let skillCounter = skillsDatabase.length + 1;
 
     // for loop through each value within local storage
     // push each value from local storage to previous entries ul
     for (let i = 1; i <= skillsDatabase.length; i++) {
         let listedSkill = skillsDatabase.getItem(i);
-        $previousEntriesUl.append(`${listedSkill}</br>`);
+        $previousEntriesUl.append(`<li>${listedSkill}</li>`);
     };
 
     // User Story #2 + #3:
 
     // functions
-
     // function: add entered skill to local storage
     function addToStorage(key, skill) {
         skillsDatabase.setItem(key, skill);
+        $previousEntriesUl.append(`<li>${skill}</li>`);
     };
 
     // add skills button event listener
     $addSkillsBtn.on("click", function() {
-        
+         
         // grabbing user input
         let $valOfEntry = $input.val();
 
@@ -69,6 +69,7 @@ $(document).ready(function() {
             // add skill to local storage
             addToStorage(skillCounter, $valOfEntry);
 
+            // add one to skill counter
             skillCounter++;
         };
     });

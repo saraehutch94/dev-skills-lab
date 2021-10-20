@@ -71,10 +71,12 @@ h4 {
     color: #FF5733;
     position: relative;
     top: -5px;
+    font-size: 20px;
 }
 
 .previous-entries {
     padding: 10px;
     margin: 0 0 10px 0;
     color: #581845;
+    list-style-type: none;
 }
