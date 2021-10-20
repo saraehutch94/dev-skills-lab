@@ -9,7 +9,11 @@ $(document).ready(function() {
     const $previousEntriesUl = $(".previous-entries");
     
     // declare variables
+
+    // save local storage object in skillsDatabase variable
     const skillsDatabase = window.localStorage;
+
+    // save length of local storage + 1 to skillCounter variable for adding skills to local storage
     let skillCounter = skillsDatabase.length + 1;
 
     // for loop through each value within local storage
@@ -22,6 +26,7 @@ $(document).ready(function() {
     // User Story #2 + #3:
 
     // functions
+    
     // function: add entered skill to local storage
     function addToStorage(key, skill) {
         skillsDatabase.setItem(key, skill);
